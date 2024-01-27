@@ -2,7 +2,6 @@ const timeSheet = require('./time-sheet.json')
 const employeeData = require('./employee-data.json')
 
 function totalWorkHoursDay(day){
-  
   return (timeSheet.janeiro[0].saida - timeSheet.janeiro[0].entrada + (timeSheet.janeiro[0].almoco - timeSheet.janeiro[0].voltaAlmoco));
 } 
 getTotalExtraHours = () => totalWorkHoursDay() - 8;
@@ -24,14 +23,44 @@ getDayTotal = () => {
   let total = diary + (extraHours * extraHoursPrice)
 
   return console.log(`No dia ${timeSheet.janeiro[14].dia}: \nO valor total é de R$ ${(total).toFixed(2)}. \nA diária foi R$ ${(diary).toFixed(2)}. \nA hora extra foi R$ ${(extraHours * extraHoursPrice).toFixed(2)}`);
-
 }
-/* getDayTotal() */
 
 function main() {
+  
+  workedHours = []
+  extra = []
+  
   for(i = 0; i < timeSheet.janeiro.length; i++) {
-    console.log(`${i + 1} - ${timeSheet.janeiro[i].saida - timeSheet.janeiro[i].entrada + (timeSheet.janeiro[i].almoco - timeSheet.janeiro[i].voltaAlmoco)}`);
+    workedHours.push(timeSheet.janeiro[i].saida - timeSheet.janeiro[i].entrada + (timeSheet.janeiro[i].almoco - timeSheet.janeiro[i].voltaAlmoco));
   }
+
+  workedHours.forEach((hours) => extra.push(hours - 8))
+  
+  totalExtra = []
+  totalPayment = []
+  diary = getDiaryValue()
+
+  for(i = 0; i < extra.length; i++){
+    totalExtra.push(get50PercentValue() * extra[i])
+  }
+
+  for(i = 0; i < extra.length; i++){
+    let total = totalExtra[i] + diary;
+    totalPayment.push(total)
+  }
+
+  console.log(totalExtra);
+  console.log(totalPayment);
+
+  for (let i = 0; i < totalPayment.length; i++) {
+    const element = totalPayment[i];
+    console.log(`R$ ${(element).toFixed(2)}`);
+  }
+
+  totalMonth = totalPayment.reduce((acc, cur) => acc + cur)
+  console.log(totalMonth.toFixed(2));
+  // console.log(`R$ ${totalPayment.toFixed(2)}`);
+
 }
 
 main()
