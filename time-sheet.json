@@ -1,7 +1,8 @@
 {
   "janeiro": [
     {
-      "dia": 12,
+      "dia_mes": 12,
+      "dia_semana": "sexta",
       "entrada": 8.00,
       "almoco": 12.00,
       "voltaAlmoco": 14.00,
@@ -103,7 +104,7 @@
       "entrada": 8.17,
       "almoco": 12.07,
       "voltaAlmoco": 14.08,
-      "saida": 19.05
+      "saida": 19.17
     }
   ]
 }
