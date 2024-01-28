@@ -1,7 +1,7 @@
 {
   "janeiro": [
     {
-      "dia_mes": 12,
+      "dia": 12,
       "dia_semana": "sexta",
       "entrada": 8.00,
       "almoco": 12.00,
@@ -10,101 +10,123 @@
     },
     {
       "dia": 13,
+      "dia_semana": "sabado",
       "entrada": 8.07,
       "almoco": 12.27,
       "voltaAlmoco": 14.27,
       "saida": 18.07
     },
     {
-      "dia": 14,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
-    },
-    {
       "dia": 15,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
+      "dia_semana": "segunda",
+      "entrada": 8.16,
+      "almoco": 12.01,
+      "voltaAlmoco": 14.01,
+      "saida": 18.45
     },
     {
       "dia": 16,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
+      "dia_semana": "terca",
+      "entrada": 8.16,
+      "almoco": 12.01,
+      "voltaAlmoco": 14.01,
+      "saida": 18.22
     },
     {
       "dia": 17,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
+      "dia_semana": "quarta",
+      "entrada": 8.24,
+      "almoco": 12.09,
+      "voltaAlmoco": 14.09,
+      "saida": 19.27
     },
     {
       "dia": 18,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
+      "dia_semana": "quinta",
+      "entrada": 8.16,
+      "almoco": 13.40,
+      "voltaAlmoco": 15.40,
+      "saida": 18.28
     },
     {
       "dia": 19,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
-    },
-    {
-      "dia": 20,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
-    },
-    {
-      "dia": 21,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
+      "dia_semana": "sexta",
+      "entrada": 8.48,
+      "almoco": 13.43,
+      "voltaAlmoco": 15.43,
+      "saida": 16.50
     },
     {
       "dia": 22,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
+      "dia_semana": "segunda",
+      "entrada": 8.05,
+      "almoco": 12.05,
+      "voltaAlmoco": 14.05,
+      "saida": 18.05
     },
     {
       "dia": 23,
-      "entrada": 8.00,
+      "dia_semana": "terca",
+      "entrada": 8.24,
       "almoco": 12.00,
       "voltaAlmoco": 14.00,
-      "saida": 18.00
+      "saida": 18.42
     },
     {
       "dia": 24,
-      "entrada": 8.00,
-      "almoco": 12.00,
-      "voltaAlmoco": 14.00,
-      "saida": 18.00
+      "dia_semana": "quarta",
+      "entrada": 8.20,
+      "almoco": 12.21,
+      "voltaAlmoco": 14.21,
+      "saida": 18.37
     },
     {
       "dia": 25,
+      "dia_semana": "quinta",
+      "entrada": 8.23,
+      "almoco": 13.01,
+      "voltaAlmoco": 15.01,
+      "saida": 18.08
+    },
+    {
+      "dia": 26,
+      "dia_semana": "sexta",
+      "entrada": 8.17,
+      "almoco": 12.07,
+      "voltaAlmoco": 14.08,
+      "saida": 19.05
+    },
+    {
+      "dia": 27,
+      "dia_semana": "sabado",
+      "entrada": 8.39,
+      "almoco": 0.00,
+      "voltaAlmoco": 0.00,
+      "saida": 12.04
+    },
+    {
+      "dia": 29,
+      "dia_semana": "segunda",
       "entrada": 8.00,
       "almoco": 12.00,
       "voltaAlmoco": 14.00,
       "saida": 18.00
     },
     {
-      "dia": 26,
-      "entrada": 8.17,
-      "almoco": 12.07,
-      "voltaAlmoco": 14.08,
-      "saida": 19.17
+      "dia": 30,
+      "dia_semana": "terca",
+      "entrada": 8.00,
+      "almoco": 12.00,
+      "voltaAlmoco": 14.00,
+      "saida": 18.00
+    },
+    {
+      "dia": 31,
+      "dia_semana": "quarta",
+      "entrada": 8.00,
+      "almoco": 12.00,
+      "voltaAlmoco": 14.00,
+      "saida": 18.00
     }
   ]
 }
