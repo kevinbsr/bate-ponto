@@ -7,4 +7,4 @@
 - [x] Calculate the discounts from the salary
 - [x] Calculate the day price
 - [x] Calculate the extra-hour payment
-- [] Calculate the whole payment to receive in the specified month
+- [ ] Calculate the whole payment to receive in the specified month
