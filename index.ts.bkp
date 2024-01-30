@@ -1,0 +1,79 @@
+import timeSheet from './time-sheet.json';
+import employeeData from './employee-data.json';
+
+const salary: number = employeeData.Kevin.salary;
+
+const getInssDescount = (salary: number): number | string => {
+  if (salary <= 1412) {
+    return 0.075;
+  } else if (salary > 1412 && salary < 2666.68) {
+    return 0.09;
+  } else if (salary > 2666.68 && salary < 4003.03) {
+    return 0.12;
+  } else if (salary > 4000.02 && salary < 7786.02) {
+    return 0.14;
+  } else {
+    return "Invalid salary range";
+  }
+};
+
+const inssDescount: number | string = getInssDescount(salary);
+
+const getDiaryValue = (): number => getInssDescount(salary, inssDescount) / 30;
+const getHourlyValue = (): number => getDiaryValue() / 8;
+const get50PercentValue = (): number => getHourlyValue() * 1.5;
+const get100PercentValue = (): number => getHourlyValue() * 2;
+
+const getDayTotal = (): void => {
+  const extraHours: any = getTotalExtraHours();
+  const diary = getDiaryValue();
+  const extraHoursPrice = get50PercentValue();
+  const total = diary + extraHours * extraHoursPrice;
+
+  console.log(`No dia ${timeSheet.janeiro[14].dia}:
+    \nO valor total é de R$ ${total.toFixed(2)}.
+    \nA diária foi R$ ${diary.toFixed(2)}.
+    \nA hora extra foi R$ ${(extraHours * extraHoursPrice).toFixed(2)}`);
+};
+
+const getTotalExtraHours = (): number[] => {
+  const workedHours: number[] = [];
+  const extra: number[] = [];
+
+  for (let i = 0; i < timeSheet.janeiro.length; i++) {
+    workedHours.push(
+      timeSheet.janeiro[i].saida -
+        timeSheet.janeiro[i].entrada +
+        (timeSheet.janeiro[i].almoco - timeSheet.janeiro[i].voltaAlmoco)
+    );
+  }
+
+  workedHours.forEach((hours) => extra.push(hours - 8));
+
+  return extra;
+};
+
+(function main() {
+  const extra = getTotalExtraHours();
+  const totalExtra: number[] = [];
+  const totalPayment: number[] = [];
+  const diary = getDiaryValue();
+
+  for (let i = 0; i < extra.length; i++) {
+    totalExtra.push(get50PercentValue() * extra[i]);
+  }
+
+  for (let i = 0; i < extra.length; i++) {
+    const total = totalExtra[i] + diary;
+    totalPayment.push(total);
+  }
+
+  for (let i = 0; i < totalPayment.length; i++) {
+    const element = totalPayment[i];
+    const dia = timeSheet.janeiro[i].dia;
+    console.log(`Dia ${dia} - R$ ${element.toFixed(2)}`);
+  }
+
+  const totalMonth = totalPayment.reduce((acc, cur) => acc + cur, 0);
+  console.log(`Total: R$ ${totalMonth.toFixed(2)} / ${timeSheet.janeiro.length} dias.`);
+})();
